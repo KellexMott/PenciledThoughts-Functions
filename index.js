@@ -5,7 +5,6 @@ const reference = admin.database();
  // Create and Deploy Your First Cloud Functions
  // https://firebase.google.com/docs/functions/write-firebase-functions
 
-
 //Sends like new notifications
 exports.newLikeNotification = functions.database.ref('/Likes/{storyId}/{pushId}')
     .onCreate(event =>{
@@ -36,7 +35,6 @@ exports.newLikeNotification = functions.database.ref('/Likes/{storyId}/{pushId}'
   });
 
 //Sends comment new notifications
-
 exports.commentNotification = functions.database.ref('/Comments/{storyId}/{pushId}')
    .onCreate(event =>{
  		    const comment = event.data.val();
